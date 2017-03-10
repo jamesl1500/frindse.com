@@ -23,7 +23,7 @@
 $config = array();
 
 $config['stylesheets'] = array('mobile'=>array(),'desktop'=>array());
-$config['javascript'] = array('mobile'=>array(),'desktop'=>array());
+$config['javascript'] = array('jquery', 'socket.io', 'main');
 
 //-- 2. Site Info
 defined('SITE_NAME') or define('SITE_NAME', 'Frindse');
@@ -33,6 +33,10 @@ defined('SITE_AUTHOR') or define('SITE_AUTHOR', 'James Latten');
 defined('SITE_UTF') or define('SITE_UTF', 'UTF-8');
 defined('SITE_LANG') or define('SITE_LANG', 'en');
 defined('SITE_TAG') or define('SITE_TAGS','');
+defined('SITE_VER') or define('SITE_VER','0.0.1');
+defined('SITE_TEMPLATES_VER') or define('SITE_TEMPLATES_VER','1');
+defined('SITE_LOGO') or define('SITE_LOGO','frindse-circle-logo.jpg');
+
 defined('SITE_ROOT') or define('SITE_ROOT',realpath(dirname(dirname(dirname(__FILE__)))));
 
 define('APP_URL', 'http://localhost/frindse.com/');
@@ -43,7 +47,7 @@ defined('DB_TYPE') or define('DB_TYPE', 'mysql');
 defined('DB_NAME') or define('DB_NAME', 'frindse.com');
 defined('DB_HOST') or define('DB_HOST','127.0.0.1');
 defined('DB_USER') or define('DB_USER','root');
-defined('DB_PASS') or define('DB_PASS','');
+defined('DB_PASS') or define('DB_PASS','Cooley12');
 
 //-- 4. Directory Configuration
 defined('APPLICATION') or define('APPLICATION', SITE_ROOT . '/app/');

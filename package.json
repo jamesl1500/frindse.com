@@ -1,0 +1,23 @@
+{
+  "name": "frindse",
+  "version": "1.0.0",
+  "description": "Frindse's main NPM installation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://jamesrouket15@bitbucket.org/jamesrouket15/frindse_main_git.git"
+  },
+  "author": "James Latten",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/jamesrouket15/frindse_main_git#readme",
+  "devDependencies": {
+    "express": "^4.15.2",
+    "forever": "^0.15.3",
+    "memcached": "^2.2.2",
+    "php-unserialize": "0.0.1",
+    "socket.io": "^1.7.3"
+  }
+}

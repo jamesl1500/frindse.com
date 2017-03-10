@@ -1,0 +1,86 @@
+/* Style Config for Frindse
+   
+   Author: James Latten
+   Copyright: Codelyft @ 2017
+*/
+
+// Dark Primary
+$darkPrimaryColor: #213246;
+
+// Primary 
+$primaryColor: #52a6e6;
+
+// Light Primary
+$lightPrimaryColor: #FFCDD2;
+
+// Accent Color
+$accentColor: #FF5252;
+
+// Primary Text Color
+$primaryText: #212121;
+
+// Secondary Text Color
+$secondaryText: #727272;
+
+// Grey Text Color
+$greyText: #aaa;
+
+// Divider Color
+$dividerColor: #B6B6B6;
+
+// Primary Font
+$primaryFont: 'Roboto';
+
+// The app url
+$primaryAppUrl: 'http://localhost/frindse-dev/';
+
+// For tether
+.tether-element,.tether-element *,.tether-element :after,.tether-element :before,.tether-element:after,.tether-element:before{box-sizing:border-box}.tether-element{position:absolute;display:none}.tether-element.tether-open{display:block}
+
+body{
+  background: #f1f1f1;
+}
+
+.hidden{
+  display: none;
+}
+
+// Inputs
+input{
+  outline: none !important;
+}
+
+.website-overlay{
+  position: -webkit-sticky;
+  position: sticky;
+
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 10001;
+
+  background: rgba(0,0,0,.6);
+
+  display: none;
+}
+
+.website-main{
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+  padding-right: 0px;
+  padding-left: 0px;
+
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+
+  z-index: 100001;
+  background: #f1f1f1;
+}

@@ -16,9 +16,9 @@ class Controller
      * ----
      * This will initialize things for every controller
      */
-    public function _construct()
+    public function __construct()
     {
-        
+        $this->initiateView();
     }
 
     public function initiateView()
@@ -26,8 +26,16 @@ class Controller
         $this->view = new View();
     }
 
-    public function initiateModel()
+    public function initiateModel($name)
     {
-        
+        $path = MODELS . '' . $name . '.model.php';
+
+        if(file_exists($path))
+        {
+            require $path;
+
+            $modalName = $name . 'Model';
+            $this->model = new $modalName();
+        }
     }
 }
