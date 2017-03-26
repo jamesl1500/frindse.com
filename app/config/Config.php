@@ -37,9 +37,11 @@ defined('SITE_VER') or define('SITE_VER','0.0.1');
 defined('SITE_TEMPLATES_VER') or define('SITE_TEMPLATES_VER','1');
 defined('SITE_LOGO') or define('SITE_LOGO','frindse-circle-logo.jpg');
 
+defined('PASSWORD_HASH_METHOD') or define('PASSWORD_HASH_METHOD', PASSWORD_BCRYPT);
+
 defined('SITE_ROOT') or define('SITE_ROOT',realpath(dirname(dirname(dirname(__FILE__)))));
 
-define('APP_URL', 'http://localhost/frindse.com/');
+define('APP_URL', 'http://192.168.0.4/frindse.com/');
 defined('FRINDSE_HASH_KEY') or define('FRINDSE_HASH_KEY',md5('ilikecodingZHwJwq5ycfhwrPtLnQK8'));
 
 //-- 3. Database Configuration
@@ -47,7 +49,7 @@ defined('DB_TYPE') or define('DB_TYPE', 'mysql');
 defined('DB_NAME') or define('DB_NAME', 'frindse.com');
 defined('DB_HOST') or define('DB_HOST','127.0.0.1');
 defined('DB_USER') or define('DB_USER','root');
-defined('DB_PASS') or define('DB_PASS','Cooley12');
+defined('DB_PASS') or define('DB_PASS','Cooley12%');
 
 //-- 4. Directory Configuration
 defined('APPLICATION') or define('APPLICATION', SITE_ROOT . '/app/');

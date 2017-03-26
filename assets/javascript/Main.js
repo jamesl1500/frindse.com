@@ -11,7 +11,7 @@ function checkLoginStatus()
 }
 
 // Start main socket
-var socket = io.connect("http://localhost:8082");
+var socket = new WebSocket("ws://localhost:8083");
 
 /* NAVBAR & HEADER */
 $(document).on('click', '.sidebarOpen', function(){

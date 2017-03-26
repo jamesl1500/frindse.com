@@ -32,7 +32,7 @@ $dividerColor: #B6B6B6;
 $primaryFont: 'Roboto';
 
 // The app url
-$primaryAppUrl: 'http://localhost/frindse-dev/';
+$primaryAppUrl: 'http://localhost/frindse.com/';
 
 // For tether
 .tether-element,.tether-element *,.tether-element :after,.tether-element :before,.tether-element:after,.tether-element:before{box-sizing:border-box}.tether-element{position:absolute;display:none}.tether-element.tether-open{display:block}
@@ -83,4 +83,57 @@ input{
 
   z-index: 100001;
   background: #f1f1f1;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+// Inputs & buttons
+.inputType{
+  margin-bottom: 8px;
+
+  input[type='email'], input[type='text'], input[type='password']
+  {
+    border: 1px solid #eee;
+    border-radius: 2px;
+    font-weight: 500;
+    color: #212121;
+    width: 100%;
+    padding: 12px;
+    padding-left: 14px;
+  }
+
+  input[type='email']:focus, input[type='text']:focus, input[type='password']:focus {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+
+  input[type='submit']{
+    padding: 10px 16px;
+    font-size: 1.0rem;
+    letter-spacing: .007px;
+    font-weight: 500;
+    border: none;
+
+    border-radius: 2px;
+  }
+}
+
+.buttonLong{
+  width: 100%;
+}
+
+.primaryBTN{
+  background: $primaryColor;
+  color: white;
 }

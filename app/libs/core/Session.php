@@ -6,14 +6,9 @@
  */
 class Sessions
 {
-    public function __construct()
-    {
-
-    }
-
     static public function initialize()
     {
-
+        session_start();
     }
 
     static public function set()

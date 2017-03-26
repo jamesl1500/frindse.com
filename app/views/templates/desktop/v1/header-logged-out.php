@@ -1,10 +1,3 @@
-<?php
-session_start();
-$_SESSION['name'] = 'yuh';
-
-echo session_id() . "\n";
-print_r($_SESSION);
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,8 +13,7 @@ print_r($_SESSION);
     <link rel="shortcut icon" href="<?php echo IMAGES; ?>logos/<?php echo SITE_LOGO; ?>" type="image/png">
 
     <!-- Main css file -->
-    <link rel="stylesheet" type="text/css" href="<?php echo CSS; ?><?php echo $this->device; ?>/v<?php echo $this->version; ?>/main.css"/>
-    <link rel="stylesheet" type="text/css" href="<?php echo CSS; ?><?php echo $this->device; ?>/v<?php echo $this->version; ?>/<?php echo $this->stylesheet; ?>.css"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo CSS; ?><?php echo $this->device; ?>/v<?php echo $this->version; ?>/<?php echo ucwords($this->stylesheet); ?>.css"/>
 </head>
 <body>
 <div class="website-main col-lg-12">
@@ -45,7 +37,10 @@ print_r($_SESSION);
             </div>
         </div>
         <div class="rightNavArea col-lg-3">
-
+            <ul>
+                <li><a href="<?php echo APP_URL; ?>signup">Signup</a></li>
+                <li><a href="<?php echo APP_URL; ?>login">Login</a></li>
+            </ul>
         </div>
     </div>
 </header>

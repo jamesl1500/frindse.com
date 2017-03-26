@@ -1,0 +1,6 @@
+PHP Fatal error:  Uncaught React\Socket\ConnectionException: Could not bind to tcp://0.0.0.0:8083: Address already in use in /var/www/html/frindse.com/vendor/react/socket/src/Server.php:90
+Stack trace:
+#0 /var/www/html/frindse.com/vendor/cboden/ratchet/src/Ratchet/Server/IoServer.php(70): React\Socket\Server->listen(8083, '0.0.0.0')
+#1 /var/www/html/frindse.com/socketServer.php(19): Ratchet\Server\IoServer::factory(Object(Ratchet\Http\HttpServer), 8083)
+#2 {main}
+  thrown in /var/www/html/frindse.com/vendor/react/socket/src/Server.php on line 90

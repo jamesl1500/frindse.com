@@ -13,6 +13,9 @@ class Bootstrap
 
         // Now initiate the system
         $this->initiateSystem();
+
+        // Now Start the sessions
+        Sessions::initialize();
     }
 
     /*
@@ -75,6 +78,9 @@ class Bootstrap
     {
         require LIBS_CORE . 'Database.php';
 
+        require LIBS_CORE . 'Validation.php';
+
+        require LIBS_CORE . 'Cookie.php';
         require LIBS_CORE . 'Session.php';
 
         require LIBS_CORE . 'Mobile.php';

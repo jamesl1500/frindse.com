@@ -86,6 +86,24 @@
 
     .rightNavArea{
 
+      ul{
+        text-align: center;
+        padding-top: 25px;
+
+        li{
+          display: inline-block;
+
+          font-size: 18px;
+          font-weight: 500;
+
+          margin-right: 15px;
+
+          a{
+            color: $secondaryText;
+            text-decoration: none;
+          }
+        }
+      }
     }
   }
 }
