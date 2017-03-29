@@ -6,5 +6,12 @@
 <script src="<?php echo APP_URL; ?>node_modules/socket.io-client/dist/socket.io.js" type="text/javascript"></script>
 
 <script src="<?php echo JAVASCRIPT; ?>Main.js" type="text/javascript"></script>
+<?php
+if(isset($this->javascript) && $this->javascript != "") {
+    ?>
+    <script src="<?php echo JAVASCRIPT; ?><?php echo $this->javascript; ?>.js" type="text/javascript"></script>
+    <?php
+}
+?>
 </body>
 </html>

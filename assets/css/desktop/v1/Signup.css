@@ -13422,223 +13422,52 @@ a {
   z-index: 1;
 }
 
-/* line 3, /var/www/html/frindse.com/assets/css/desktop/v1/sass/Index.scss */
-.index-jumbo-main {
-  padding: 0px;
-  height: 500px;
-  background-image: url(https://images.unsplash.com/photo-1489617482379-fc98cdb77efb?dpr=1&auto=format&fit=crop&w=1500&h=844&q=80&cs=tinysrgb&crop=);
-  background-size: cover;
-  margin-bottom: 0px;
-}
-
-/* line 12, /var/www/html/frindse.com/assets/css/desktop/v1/sass/Index.scss */
-.index-jumbo-main .cover {
-  background: rgba(0, 0, 0, 0.5);
-  height: 100%;
-  width: 100%;
-}
-
-/* line 20, /var/www/html/frindse.com/assets/css/desktop/v1/sass/Index.scss */
-.index-jumbo-main .cover .mainMiddle .leftText {
-  vertical-align: center;
-  margin-top: 150px;
-}
-
-/* line 24, /var/www/html/frindse.com/assets/css/desktop/v1/sass/Index.scss */
-.index-jumbo-main .cover .mainMiddle .leftText h3 {
-  color: white;
-  font-weight: 200;
-  font-size: 3.4em;
-}
-
-/* line 30, /var/www/html/frindse.com/assets/css/desktop/v1/sass/Index.scss */
-.index-jumbo-main .cover .mainMiddle .leftText h4 {
-  color: white;
-  font-weight: 100;
-  font-size: 2.0em;
-  margin-top: 15px;
-  margin-bottom: 13px;
-}
-
-/* line 40, /var/www/html/frindse.com/assets/css/desktop/v1/sass/Index.scss */
-.index-jumbo-main .cover .mainMiddle .leftText a {
-  margin-top: 10px;
-  font-size: 1.3em;
-  font-weight: 200;
-  color: white;
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-/* line 54, /var/www/html/frindse.com/assets/css/desktop/v1/sass/Index.scss */
-.index-jumbo-main .cover .mainMiddle .rightText .loginCont {
-  float: right;
-  margin: 0% auto;
-  background: white;
-  padding: 15px;
-  border-radius: 2px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  margin-top: 100px;
-}
-
-/* line 65, /var/www/html/frindse.com/assets/css/desktop/v1/sass/Index.scss */
-.index-jumbo-main .cover .mainMiddle .rightText .loginCont .topHead {
-  padding: 20px;
-  padding-top: 15px;
-}
-
-/* line 69, /var/www/html/frindse.com/assets/css/desktop/v1/sass/Index.scss */
-.index-jumbo-main .cover .mainMiddle .rightText .loginCont .topHead h3 {
-  color: #727272;
-  font-size: 22px;
-  text-align: center;
-}
-
-/* line 76, /var/www/html/frindse.com/assets/css/desktop/v1/sass/Index.scss */
-.index-jumbo-main .cover .mainMiddle .rightText .loginCont .mainInnerLoginCont {
-  padding-bottom: 15px;
-}
-
-/* line 80, /var/www/html/frindse.com/assets/css/desktop/v1/sass/Index.scss */
-.index-jumbo-main .cover .mainMiddle .rightText .loginCont .footerLinks {
-  padding: 20px;
-  padding-bottom: 8px;
-  padding-left: 0px;
-  border-top: 1px solid #eee;
-}
-
-/* line 88, /var/www/html/frindse.com/assets/css/desktop/v1/sass/Index.scss */
-.index-jumbo-main .cover .mainMiddle .rightText .loginCont .footerLinks a {
-  color: #727272;
-}
-
-/* line 98, /var/www/html/frindse.com/assets/css/desktop/v1/sass/Index.scss */
-.secondJumboMain {
-  background: white;
-  margin-bottom: 0px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-}
-
-/* line 104, /var/www/html/frindse.com/assets/css/desktop/v1/sass/Index.scss */
-.secondJumboMain .innerTron {
-  float: none;
-  margin: 0% auto;
-}
-
-/* line 108, /var/www/html/frindse.com/assets/css/desktop/v1/sass/Index.scss */
-.secondJumboMain .innerTron h4 {
-  text-align: center;
-  color: #52a6e6;
-  font-size: 2.5em;
-  font-weight: 200;
-  margin-bottom: 5px;
-}
-
-/* line 118, /var/www/html/frindse.com/assets/css/desktop/v1/sass/Index.scss */
-.secondJumboMain .innerTron h3 {
-  text-align: center;
-  color: #52a6e6;
-  font-size: 3.8em;
-  font-weight: 200;
-}
-
-/* line 126, /var/www/html/frindse.com/assets/css/desktop/v1/sass/Index.scss */
-.secondJumboMain .innerTron p {
-  margin-top: 15px;
-  text-align: center;
-}
-
-/* line 133, /var/www/html/frindse.com/assets/css/desktop/v1/sass/Index.scss */
-.thirdJumboMain {
-  padding: 0px;
-  height: 450px;
-  background-image: url(https://images.unsplash.com/photo-1486564303011-220760af48d4?dpr=1&auto=format&fit=crop&w=1500&h=1875&q=80&cs=tinysrgb&crop=);
-  background-size: cover;
-  margin-bottom: 0px;
-}
-
-/* line 142, /var/www/html/frindse.com/assets/css/desktop/v1/sass/Index.scss */
-.thirdJumboMain .innerTron {
-  background: rgba(0, 0, 0, 0.5);
-  height: 100%;
-  width: 100%;
-}
-
-/* line 148, /var/www/html/frindse.com/assets/css/desktop/v1/sass/Index.scss */
-.thirdJumboMain .innerTron .innerIt {
-  margin-top: 100px;
-  padding-left: 16px;
-}
-
-/* line 152, /var/www/html/frindse.com/assets/css/desktop/v1/sass/Index.scss */
-.thirdJumboMain .innerTron .innerIt h4 {
-  color: white;
-  font-size: 2.3em;
-  font-weight: 200;
-  margin-bottom: 5px;
-}
-
-/* line 161, /var/www/html/frindse.com/assets/css/desktop/v1/sass/Index.scss */
-.thirdJumboMain .innerTron .innerIt h3 {
-  color: white;
-  font-size: 3.8em;
-  font-weight: 200;
-}
-
-/* line 168, /var/www/html/frindse.com/assets/css/desktop/v1/sass/Index.scss */
-.thirdJumboMain .innerTron .innerIt p {
-  margin-top: 15px;
-  width: 60%;
-  color: white;
-}
-
-/* line 178, /var/www/html/frindse.com/assets/css/desktop/v1/sass/Index.scss */
-.fourthJumboMain {
-  padding: 0px;
-  height: 450px;
-  background-image: url(https://images.unsplash.com/photo-1489914023688-f41499faec3f?dpr=1&auto=format&fit=crop&w=1500&h=2002&q=80&cs=tinysrgb&crop=);
+/* line 3, /var/www/html/frindse.com/assets/css/desktop/v1/sass/Signup.scss */
+.banner {
+  background: url(https://images.unsplash.com/photo-1462204215829-29407c570832?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=);
   background-size: cover;
   background-position: center;
-  margin-bottom: 0px;
-}
-
-/* line 189, /var/www/html/frindse.com/assets/css/desktop/v1/sass/Index.scss */
-.fourthJumboMain .innerTron {
-  background: rgba(0, 0, 0, 0.5);
-  height: 100%;
+  height: 500px;
   width: 100%;
+  -webkit-filter: blur(0px);
 }
 
-/* line 195, /var/www/html/frindse.com/assets/css/desktop/v1/sass/Index.scss */
-.fourthJumboMain .innerTron .innerIt {
-  margin-top: 100px;
-  padding-left: 16px;
+/* line 14, /var/www/html/frindse.com/assets/css/desktop/v1/sass/Signup.scss */
+.banner .cover {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
 }
 
-/* line 199, /var/www/html/frindse.com/assets/css/desktop/v1/sass/Index.scss */
-.fourthJumboMain .innerTron .innerIt h4 {
+/* line 20, /var/www/html/frindse.com/assets/css/desktop/v1/sass/Signup.scss */
+.banner .cover h1 {
+  text-align: center;
   color: white;
-  font-size: 2.3em;
   font-weight: 200;
-  margin-bottom: 5px;
-  text-align: right;
+  font-size: 4em;
+  padding-top: 150px;
 }
 
-/* line 210, /var/www/html/frindse.com/assets/css/desktop/v1/sass/Index.scss */
-.fourthJumboMain .innerTron .innerIt h3 {
+/* line 29, /var/www/html/frindse.com/assets/css/desktop/v1/sass/Signup.scss */
+.banner .cover p {
+  text-align: center;
   color: white;
-  font-size: 3.8em;
-  font-weight: 200;
-  text-align: right;
+  font-weight: 100;
+  font-size: 2em;
+  padding-top: 20px;
 }
 
-/* line 220, /var/www/html/frindse.com/assets/css/desktop/v1/sass/Index.scss */
-.fourthJumboMain .innerTron .innerIt p {
-  margin-top: 15px;
-  width: 60%;
-  color: white;
-  text-align: right;
-  float: right;
+/* line 40, /var/www/html/frindse.com/assets/css/desktop/v1/sass/Signup.scss */
+.signupCont {
+  float: none;
+  padding: 35px;
+  background: white;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  margin: 0% auto;
+  margin-top: 50px;
+  position: relative;
+  top: -200px;
 }
 
-/*# sourceMappingURL=../Index.map */
+/*# sourceMappingURL=../Signup.map */

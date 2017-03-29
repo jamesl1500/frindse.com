@@ -21,4 +21,19 @@ class Validation
     {
         return password_hash($value, $type);
     }
+
+    static public function randomHash()
+    {
+        return substr(uniqid(rand(), true), 0, 20);
+    }
+
+    static public function encrypt($data)
+    {
+        return openssl_encrypt($data, ENCRYPTION_METHOD, ENCRYPTION_KEY,'', ENCRYPTION_KEY);
+    }
+
+    static public function decrypt($data)
+    {
+        return openssl_decrypt($data, ENCRYPTION_METHOD, ENCRYPTION_KEY,'', ENCRYPTION_KEY);
+    }
 }

@@ -42,7 +42,9 @@ defined('PASSWORD_HASH_METHOD') or define('PASSWORD_HASH_METHOD', PASSWORD_BCRYP
 defined('SITE_ROOT') or define('SITE_ROOT',realpath(dirname(dirname(dirname(__FILE__)))));
 
 define('APP_URL', 'http://192.168.0.4/frindse.com/');
-defined('FRINDSE_HASH_KEY') or define('FRINDSE_HASH_KEY',md5('ilikecodingZHwJwq5ycfhwrPtLnQK8'));
+
+defined('ENCRYPTION_METHOD') or define('ENCRYPTION_METHOD','AES-256-CBC');
+defined('ENCRYPTION_KEY') or define('ENCRYPTION_KEY','N70g2FA4u9A5r5qssX6p927DH1yIK8uG');
 
 //-- 3. Database Configuration
 defined('DB_TYPE') or define('DB_TYPE', 'mysql');

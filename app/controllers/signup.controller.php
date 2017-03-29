@@ -1,14 +1,14 @@
 <?php
-class errorController extends Controller
+class SignupController extends Controller
 {
     public function __construct()
     {
         parent::__construct();
 
         // Find out model
-        $this->initiateModel('index');
+        $this->initiateModel('signup');
 
-        // Initiate the view vars
+        // Initiate the device
         if($this->view->mobile->isTablet())
         {
             $this->view->device = "tablet";
@@ -20,14 +20,16 @@ class errorController extends Controller
         }
     }
 
-    public function index($type)
+    public function index()
     {
-        $this->view->title = $type['type'] . " | Frindse";
+        // Initiate view vars for this page
+        $this->view->title = "Signup | Frindse";
         $this->view->version = SITE_TEMPLATES_VER;
-        $this->view->stylesheet = "error";
+        $this->view->stylesheet = "signup";
+        $this->view->javascript = "Signup";
         $this->view->header = "header-logged-out";
 
         // Now create the view
-        $this->view->render('error', $type['type'], SITE_TEMPLATES_VER);
+        $this->view->render('signup', 'index', SITE_TEMPLATES_VER);
     }
 }

@@ -13110,7 +13110,7 @@ input {
 /* close commented backslash hack */
 /* line 103, /var/www/html/frindse.com/assets/css/desktop/v1/sass/partials/_Config.scss */
 .inputType {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 /* line 106, /var/www/html/frindse.com/assets/css/desktop/v1/sass/partials/_Config.scss */
@@ -13131,7 +13131,7 @@ input {
 
 /* line 121, /var/www/html/frindse.com/assets/css/desktop/v1/sass/partials/_Config.scss */
 .inputType input[type='submit'] {
-  padding: 10px 16px;
+  padding: 14px 16px;
   font-size: 1.0rem;
   letter-spacing: .007px;
   font-weight: 500;
@@ -13139,12 +13139,24 @@ input {
   border-radius: 2px;
 }
 
-/* line 132, /var/www/html/frindse.com/assets/css/desktop/v1/sass/partials/_Config.scss */
+/* line 131, /var/www/html/frindse.com/assets/css/desktop/v1/sass/partials/_Config.scss */
+.inputType label {
+  padding-bottom: 8px;
+  color: #727272;
+  font-weight: 100;
+}
+
+/* line 138, /var/www/html/frindse.com/assets/css/desktop/v1/sass/partials/_Config.scss */
+.inputType:last-child {
+  margin-bottom: 0px;
+}
+
+/* line 142, /var/www/html/frindse.com/assets/css/desktop/v1/sass/partials/_Config.scss */
 .buttonLong {
   width: 100%;
 }
 
-/* line 136, /var/www/html/frindse.com/assets/css/desktop/v1/sass/partials/_Config.scss */
+/* line 146, /var/www/html/frindse.com/assets/css/desktop/v1/sass/partials/_Config.scss */
 .primaryBTN {
   background: #52a6e6;
   color: white;

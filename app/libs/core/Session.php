@@ -11,13 +11,23 @@ class Sessions
         session_start();
     }
 
-    static public function set()
+    static public function set($key, $value)
     {
-
+        $_SESSION[$key] = $value;
     }
 
-    static public function get()
+    static public function get($key)
     {
+        return $_SESSION[$key];
+    }
 
+    static public function unset($key)
+    {
+        unset($_SESSION[$key]);
+    }
+
+    static public function unsetAll()
+    {
+        unset($_SESSION);
     }
 }

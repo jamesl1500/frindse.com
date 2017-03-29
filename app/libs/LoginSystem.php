@@ -6,5 +6,13 @@
  */
 class loginSystem extends Database
 {
+    public function __construct()
+    {
 
+    }
+
+    static public function login()
+    {
+
+    }
 }
