@@ -11,7 +11,14 @@ function checkLoginStatus()
 }
 
 // Start main socket
-var socket = new WebSocket("ws://192.168.0.4:8083");
+var socket = new WebSocket("ws://localhost:8083");
+
+socket.onmessage = function(e) {
+    console.log(e.data);
+};
+socket.onopen = function(e) {
+    console.log("Connection established!");
+};
 
 /* NAVBAR & HEADER */
 $(document).on('click', '.sidebarOpen', function(){

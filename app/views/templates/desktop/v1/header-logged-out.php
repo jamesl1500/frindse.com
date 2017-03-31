@@ -1,3 +1,7 @@
+<?php
+$login = new LoginSystem();
+$check = $login->isLoggedIn();
+?>
 <!DOCTYPE html>
 <html>
 <head>

@@ -6,6 +6,7 @@
 </div>
 <div class=" col-lg-4 col-md-4 signupCont">
     <form action="" method="post" id="signupForm" onsubmit="return false;">
+        <div class="responseHold"></div>
         <div class="inputType">
             <label>Firstname</label>
             <input type="text" id="firstname" placeholder="Firstname" />
@@ -24,7 +25,7 @@
         </div><br />
         <div class="inputType">
             <label>Password</label>
-            <input type="text" id="password" placeholder="Password" />
+            <input type="password" id="password" placeholder="Password" />
         </div><br />
         <div class="inputType">
             <input type="submit" id="password" value="Signup" class="buttonLong primaryBTN"/>

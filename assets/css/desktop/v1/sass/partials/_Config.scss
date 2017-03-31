@@ -31,6 +31,19 @@ $dividerColor: #B6B6B6;
 // Primary Font
 $primaryFont: 'Roboto';
 
+$primaryblue:   #50a3e2;
+$primarygreen:  #1abc9c;
+$primarypink:   #ff4081;
+$primaryred:    #e74c3c;
+$primarypurple: #673ab7;
+$primaryorange: #ff9460;
+$primarygrey: #bdc3c7;
+$primaryyellow: #f1c40f;
+$primarynavy: #34495e;
+
+$primarysuccess: #2ecc71;
+
+
 // The app url
 $primaryAppUrl: 'http://localhost/frindse.com/';
 
@@ -145,5 +158,56 @@ input{
 
 .primaryBTN{
   background: $primaryColor;
+  color: white;
+}
+
+/**
+*  Cards
+**/
+.card-default{
+  background: white;
+}
+
+.card-center{
+  margin:0% auto !important;
+  float: none !important;
+}
+
+.card{
+  border-radius: 2px;
+
+  box-shadow: 0 2px 0 0 rgba(0,0,0,.1);
+  border-bottom: 1px solid #F9F9F9;
+
+  height: auto;
+
+  padding: 20px;
+}
+
+/**
+*  Alert boxes
+**/
+.response{
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 3px;
+  border: 1px solid rgba(0,0,0,0.2);
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 5px;
+
+}
+
+.error{
+  @extend .response;
+
+  background: $primaryred;
+  color: white;
+}
+
+.success{
+  @extend .response;
+
+  background: $primarysuccess;
   color: white;
 }

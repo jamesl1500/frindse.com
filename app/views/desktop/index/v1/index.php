@@ -12,12 +12,13 @@
                         <h3>Login</h3>
                     </div>
                     <div class="mainInnerLoginCont">
-                        <form action="" method="post" autocomplete="off" onsubmit="return false;" id="loginCont">
+                        <form action="" method="post" autocomplete="off" onsubmit="return false;" id="loginForm">
+                            <div class="responseHold"></div>
                             <div class="inputType">
-                                <input type="email" id="emailLogin" placeholder="Email" />
+                                <input type="email" id="email" placeholder="Email" />
                             </div>
                             <div class="inputType">
-                                <input type="password" id="passwordLogin" placeholder="Password" />
+                                <input type="password" id="password" placeholder="Password" />
                             </div>
                             <div class="inputType">
                                 <input type="submit" class="primaryBTN buttonLong" value="Login" />

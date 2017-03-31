@@ -41,7 +41,7 @@ defined('PASSWORD_HASH_METHOD') or define('PASSWORD_HASH_METHOD', PASSWORD_BCRYP
 
 defined('SITE_ROOT') or define('SITE_ROOT',realpath(dirname(dirname(dirname(__FILE__)))));
 
-define('APP_URL', 'http://192.168.0.4/frindse.com/');
+define('APP_URL', 'http://localhost/frindse.com/');
 
 defined('ENCRYPTION_METHOD') or define('ENCRYPTION_METHOD','AES-256-CBC');
 defined('ENCRYPTION_KEY') or define('ENCRYPTION_KEY','N70g2FA4u9A5r5qssX6p927DH1yIK8uG');
@@ -94,6 +94,8 @@ define('MESSAGE_USERNAME_ALREADY_EXIST','This username is already taken!');
 define('MESSAGE_EMAIL_ALREADY_EXIST','This email is already taken!');
 define('MESSAGE_BOTH_TAKEN','Both the email and username are taken!');
 
+define('MESSAGE_ACCOUNT_EXIST','An account with this username or email already exists');
+
 define('MESSAGE_EMAILS_DONT_MATCH',"Your emails don't match!");
 define('MESSAGE_PASSWORDS_DONT_MATCH',"Your passwords don't match!");
 
@@ -108,6 +110,8 @@ define('MESSAGE_ACTIVATION_ERROR_ONE',"This email or code don't match up!");
 
 define('MESSAGE_FRIEND_REQUEST_NOT_FOUND', 'This is a invalid friend request');
 define('MESSAGE_ALREADY_FRIENDS', "Looks like you're already friends with them!");
+
+define('MESSAGE_INVALID_EMAIL','Please enter a valid email');
 
 //-- 6. Sessions
 ini_set('session.save_path', SESSIONS);

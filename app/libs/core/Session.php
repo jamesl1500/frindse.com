@@ -21,7 +21,7 @@ class Sessions
         return $_SESSION[$key];
     }
 
-    static public function unset($key)
+    static public function unsetKey($key)
     {
         unset($_SESSION[$key]);
     }

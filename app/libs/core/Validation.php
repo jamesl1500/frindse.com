@@ -14,7 +14,7 @@ class Validation
 
     static public function isEmail($value)
     {
-        return FILTER_VALIDATE_EMAIL($value);
+        return filter_var($value, FILTER_VALIDATE_EMAIL);
     }
 
     static public function passwordEncrypt($value, $type = PASSWORD_HASH_METHOD)
@@ -29,11 +29,11 @@ class Validation
 
     static public function encrypt($data)
     {
-        return openssl_encrypt($data, ENCRYPTION_METHOD, ENCRYPTION_KEY,'', ENCRYPTION_KEY);
+        return @openssl_encrypt($data, ENCRYPTION_METHOD, ENCRYPTION_KEY, NULL, ENCRYPTION_KEY);
     }
 
     static public function decrypt($data)
     {
-        return openssl_decrypt($data, ENCRYPTION_METHOD, ENCRYPTION_KEY,'', ENCRYPTION_KEY);
+        return @openssl_decrypt($data, ENCRYPTION_METHOD, ENCRYPTION_KEY, NULL, ENCRYPTION_KEY);
     }
 }

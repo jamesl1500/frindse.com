@@ -19,6 +19,6 @@ class Cookie
     static public function delete($key)
     {
         unset($_COOKIE[$key]);
-        setcookie($key, '', time()-1);
+        @setcookie($key, '', time()-1);
     }
 }
