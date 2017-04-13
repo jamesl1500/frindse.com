@@ -1,6 +1,8 @@
 <?php
 class Bootstrap
 {
+    private $hash;
+
    /*
     * Main Construct
     * ----
@@ -16,6 +18,9 @@ class Bootstrap
 
         // Now initiate the system
         $this->initiateSystem();
+
+        // Hash
+        $this->hash = Validation::encrypt(Validation::randomHash());
     }
 
     /*
@@ -40,7 +45,7 @@ class Bootstrap
                 if($url[0] != "api")
                 {
                     // Lets route this single page then
-                    Sessions::set(CSRF_TOKEN_NAME, Validation::encrypt(Validation::randomHash()));
+                    Sessions::set(CSRF_TOKEN_NAME, $this->hash);
                     Router::Route($url[0]);
                 }else {
                     // This is an API call so route this to the api route function that handles every api(ajax) call
@@ -74,6 +79,31 @@ class Bootstrap
                             if($url[1] != "" && $url[2] != "")
                             {
                                 Router::RoutePageWithSub('signup','activate', array('email' => $url[2], 'code' => $url[3]));
+                            }
+                            break;
+                        case 'forgot_password':
+                            if($url[1] != "" && $url[2] != "")
+                            {
+                                Router::RoutePageWithSub('forgot_password','reset', array('email' => $url[2], 'code' => $url[3]));
+                            }
+                            break;
+                        case 'users':
+                            if ($url[1] != "" && $url[1] == "data")
+                            {
+                                if (isset($url[2]) && isset($url[3]))
+                                {
+                                    // Url 2 is the salt, url 3 is the type
+                                    if ($url[3] == "profile_picture")
+                                    {
+                                        // Get the profile picture according to the provided salt
+                                        $link = Users::renderProfilePic($url[2]);
+                                        FileReader::photo($link);
+                                    }else if ($url[3] == "banner"){
+                                        // Get the banner picture according to the provided salt
+                                        $link = Users::renderBannerPic($url[2]);
+                                        FileReader::photo($link);
+                                    }
+                                }
                             }
                             break;
                     }
@@ -111,12 +141,29 @@ class Bootstrap
         require LIBS_CORE . 'Api.php';
 
         require LIBS_CORE . 'Emailer.php';
+        require LIBS_CORE . 'FileReader.php';
+
+        require LIBS . 'Convert.php';
+
+        require LIBS . 'Users.php';
+        require LIBS . 'Friends.php';
+        require LIBS . 'Tagging.php';
+        require LIBS . 'Notifications.php';
+        require LIBS . 'Block.php';
+
+        require LIBS . 'Suggestions.php';
+
+        require LIBS . 'Clique.php';
+        require LIBS . 'Search.php';
 
         require LIBS . 'LoginSystem.php';
         require LIBS . 'SignupSystem.php';
         require LIBS . 'ForgotPasswordSystem.php';
 
-
+        require LIBS . 'Points.php';
+        require LIBS . 'Achievement.php';
+        
+        require LIBS . 'Posts.php';
 
     }
 

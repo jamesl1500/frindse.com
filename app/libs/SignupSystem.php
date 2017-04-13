@@ -26,11 +26,11 @@ class SignupSystem extends Database
         if(isset($data['code']) && isset($data['email']))
         {
             // Make sure this is valid
-            $check = $this->db->prepare("SELECT * FROM users WHERE user_salt=:code AND email=:email");
+            $check = $this->db->prepare("SELECT * FROM ". USERS ." WHERE user_salt=:code AND email=:email");
             if($check->execute(array(':code'=>$data['code'], ':email'=>$data['email'])))
             {
                 // Now update the account
-                $update = $this->db->prepare("UPDATE users SET activated='1' WHERE user_salt=:code AND email=:email");
+                $update = $this->db->prepare("UPDATE ". USERS ." SET activated='1' WHERE user_salt=:code AND email=:email");
                 if($update->execute(array(':code'=>$data['code'], ':email'=>$data['email'])))
                 {
                     // Log user in on the backend
@@ -69,7 +69,7 @@ class SignupSystem extends Database
                 $password = Validation::santitize($data['password']);
 
                 // Now insert into database
-                $insert = $this->db->prepare("INSERT INTO users VALUES('', :salt, :firstname, :lastname, :username, :email, :password, '0', 'unlocked', now())");
+                $insert = $this->db->prepare("INSERT INTO ". USERS ." VALUES('', :salt, :firstname, :lastname, :username, :email, :password, 'default_pic.jpg', 'default_banner.jpg', '0', 'unlocked', now(), '50', '')");
                 if($insert->execute(array(':salt'=>$salt, ':firstname'=>$firstname, ':lastname'=>$lastname, ':username'=>$username, ':email'=>$this->email, ':password'=>Validation::passwordEncrypt($password))))
                 {
                     // Now create the users directories and give permissions
@@ -147,7 +147,7 @@ class SignupSystem extends Database
         {
             $this->email = Validation::encrypt($email);
 
-            $check = $this->db->prepare("SELECT * FROM users WHERE username=:username AND email=:email");
+            $check = $this->db->prepare("SELECT * FROM ". USERS ." WHERE username=:username AND email=:email");
             if($check->execute(array(':username' => $username, ':email' => $this->email)))
             {
                 if($check->rowCount() > 0)

@@ -44,7 +44,7 @@ $(function() {
             var code = $(this).data('c');
             var email  = $(this).data('e');
 
-            if(code != "" && email != "")
+            if(code.val() != "" && email.val() != "")
             {
                 $.post(folder + '/api/auth/activate',{code: code, email: email}, function(data){
                     var obj = jQuery.parseJSON(data);

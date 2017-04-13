@@ -1,0 +1,299 @@
+/* line 13, /Applications/XAMPP/xamppfiles/htdocs/frindse.com/assets/css/desktop/v1/sass/partials/PostStyle.scss */
+.activityTimelinePost > .rightActivity h5 a,
+.timeline-item > .inner_timeline_post p,
+.timeline-item > .timeline-item-upper > .right-timeline a h3,
+.timeline-item > .timeline-item-upper > .right-timeline div h3 {
+  font-weight: 400;
+}
+
+/* line 20, /Applications/XAMPP/xamppfiles/htdocs/frindse.com/assets/css/desktop/v1/sass/partials/PostStyle.scss */
+.postDropDownCont {
+  width: 131.484375px;
+  background: white;
+  border-radius: 3px;
+  border: 1px solid #eee;
+  float: right;
+}
+
+/* line 29, /Applications/XAMPP/xamppfiles/htdocs/frindse.com/assets/css/desktop/v1/sass/partials/PostStyle.scss */
+.postDropDownCont ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+/* line 34, /Applications/XAMPP/xamppfiles/htdocs/frindse.com/assets/css/desktop/v1/sass/partials/PostStyle.scss */
+.postDropDownCont ul li {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* line 44, /Applications/XAMPP/xamppfiles/htdocs/frindse.com/assets/css/desktop/v1/sass/partials/PostStyle.scss */
+.cancelEdit {
+  background: #e74c3c;
+  color: white;
+}
+
+/* line 49, /Applications/XAMPP/xamppfiles/htdocs/frindse.com/assets/css/desktop/v1/sass/partials/PostStyle.scss */
+.whoRepostedThis {
+  padding: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* line 53, /Applications/XAMPP/xamppfiles/htdocs/frindse.com/assets/css/desktop/v1/sass/partials/PostStyle.scss */
+.whoRepostedThis p {
+  color: #aaa;
+}
+
+/* line 58, /Applications/XAMPP/xamppfiles/htdocs/frindse.com/assets/css/desktop/v1/sass/partials/PostStyle.scss */
+.timeline-item {
+  background: white;
+  width: 100%;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border-top: 0px;
+  border-bottom: 0px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+/* line 69, /Applications/XAMPP/xamppfiles/htdocs/frindse.com/assets/css/desktop/v1/sass/partials/PostStyle.scss */
+.timeline-item .topPostAlways {
+  padding: 20px;
+  width: 98%;
+  margin: 0 auto;
+}
+
+/* line 76, /Applications/XAMPP/xamppfiles/htdocs/frindse.com/assets/css/desktop/v1/sass/partials/PostStyle.scss */
+.timeline-item .topPostAlways .topAuthorPortion .authorProfilePic {
+  float: left;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-size: cover;
+}
+
+/* line 86, /Applications/XAMPP/xamppfiles/htdocs/frindse.com/assets/css/desktop/v1/sass/partials/PostStyle.scss */
+.timeline-item .topPostAlways .topAuthorPortion .rightAuthorInfo {
+  margin-left: 55px;
+  padding-top: 5px;
+  padding-left: 5px;
+}
+
+/* line 91, /Applications/XAMPP/xamppfiles/htdocs/frindse.com/assets/css/desktop/v1/sass/partials/PostStyle.scss */
+.timeline-item .topPostAlways .topAuthorPortion .rightAuthorInfo a {
+  color: #333;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* line 97, /Applications/XAMPP/xamppfiles/htdocs/frindse.com/assets/css/desktop/v1/sass/partials/PostStyle.scss */
+.timeline-item .topPostAlways .topAuthorPortion .rightAuthorInfo h3 {
+  color: #aaa;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* line 105, /Applications/XAMPP/xamppfiles/htdocs/frindse.com/assets/css/desktop/v1/sass/partials/PostStyle.scss */
+.timeline-item .topPostAlways .postTextBody {
+  padding-top: 5px;
+}
+
+/* line 108, /Applications/XAMPP/xamppfiles/htdocs/frindse.com/assets/css/desktop/v1/sass/partials/PostStyle.scss */
+.timeline-item .topPostAlways .postTextBody p {
+  word-break: keep-all;
+}
+
+/* line 114, /Applications/XAMPP/xamppfiles/htdocs/frindse.com/assets/css/desktop/v1/sass/partials/PostStyle.scss */
+.timeline-item .actionsHolder {
+  padding: 20px;
+  padding-top: 00px;
+  width: 98%;
+  margin: 0 auto;
+}
+
+/* line 120, /Applications/XAMPP/xamppfiles/htdocs/frindse.com/assets/css/desktop/v1/sass/partials/PostStyle.scss */
+.timeline-item .actionsHolder a {
+  color: #52a6e6;
+  cursor: pointer;
+}
+
+/* line 125, /Applications/XAMPP/xamppfiles/htdocs/frindse.com/assets/css/desktop/v1/sass/partials/PostStyle.scss */
+.timeline-item .actionsHolder .unlikeBTN {
+  color: #e74c3c;
+  transition: color 1s;
+}
+
+/* line 132, /Applications/XAMPP/xamppfiles/htdocs/frindse.com/assets/css/desktop/v1/sass/partials/PostStyle.scss */
+.timeline-item .bottomPostAssets {
+  border-top: 1px solid #eee;
+  background: #f5f5f5;
+  padding: 10px;
+  padding-left: 20px;
+}
+
+/* line 141, /Applications/XAMPP/xamppfiles/htdocs/frindse.com/assets/css/desktop/v1/sass/partials/PostStyle.scss */
+.timeline-item .bottomPostAssets .postStatsTop ul li {
+  display: inline-block;
+  margin-right: 10px;
+  color: #52a6e6;
+}
+
+/* line 146, /Applications/XAMPP/xamppfiles/htdocs/frindse.com/assets/css/desktop/v1/sass/partials/PostStyle.scss */
+.timeline-item .bottomPostAssets .postStatsTop ul li .fspan {
+  display: inline-block;
+  font-weight: 300;
+  color: #333;
+  padding: 3px;
+}
+
+/* line 151, /Applications/XAMPP/xamppfiles/htdocs/frindse.com/assets/css/desktop/v1/sass/partials/PostStyle.scss */
+.timeline-item .bottomPostAssets .postStatsTop ul li .fspan i {
+  font-size: 12px;
+  padding: 4px 4px;
+  display: inline-block;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+  color: white;
+  background: #52a6e6;
+}
+
+/* line 164, /Applications/XAMPP/xamppfiles/htdocs/frindse.com/assets/css/desktop/v1/sass/partials/PostStyle.scss */
+.timeline-item .bottomPostAssets .postStatsTop ul li .likeCH {
+  color: #e74c3c;
+}
+
+/* line 166, /Applications/XAMPP/xamppfiles/htdocs/frindse.com/assets/css/desktop/v1/sass/partials/PostStyle.scss */
+.timeline-item .bottomPostAssets .postStatsTop ul li .likeCH i {
+  background: #e74c3c;
+}
+
+/* line 171, /Applications/XAMPP/xamppfiles/htdocs/frindse.com/assets/css/desktop/v1/sass/partials/PostStyle.scss */
+.timeline-item .bottomPostAssets .postStatsTop ul li .sspan {
+  color: #258fe0;
+  position: relative;
+  top: 1px;
+  font-size: 13px;
+}
+
+/* line 182, /Applications/XAMPP/xamppfiles/htdocs/frindse.com/assets/css/desktop/v1/sass/partials/PostStyle.scss */
+.timeline-item .bottomPostAssets .commentArea .cmod {
+  padding-top: 10px;
+}
+
+/* line 186, /Applications/XAMPP/xamppfiles/htdocs/frindse.com/assets/css/desktop/v1/sass/partials/PostStyle.scss */
+.timeline-item .bottomPostAssets .commentArea .commentFormHold {
+  margin-top: 10px;
+  border-top: 1px solid #eee;
+  padding: 15px;
+  padding-left: 0px;
+  padding-bottom: 5px;
+}
+
+/* line 194, /Applications/XAMPP/xamppfiles/htdocs/frindse.com/assets/css/desktop/v1/sass/partials/PostStyle.scss */
+.timeline-item .bottomPostAssets .commentArea .commentFormHold form .commentPicHolder {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  float: left;
+}
+
+/* line 202, /Applications/XAMPP/xamppfiles/htdocs/frindse.com/assets/css/desktop/v1/sass/partials/PostStyle.scss */
+.timeline-item .bottomPostAssets .commentArea .commentFormHold form .commentMakerAssets {
+  margin-left: 55px;
+}
+
+/* line 206, /Applications/XAMPP/xamppfiles/htdocs/frindse.com/assets/css/desktop/v1/sass/partials/PostStyle.scss */
+.timeline-item .bottomPostAssets .commentArea .commentFormHold form .commentMakerAssets input[type="text"] {
+  margin: 0px;
+  background: transparent;
+  border: none;
+  color: #333;
+  font-weight: 400;
+  outline: none;
+}
+
+/* line 221, /Applications/XAMPP/xamppfiles/htdocs/frindse.com/assets/css/desktop/v1/sass/partials/PostStyle.scss */
+.item {
+  display: inline-block;
+  margin: 0 0 1em;
+  width: 100%;
+}
+
+/* line 227, /Applications/XAMPP/xamppfiles/htdocs/frindse.com/assets/css/desktop/v1/sass/partials/PostStyle.scss */
+.comment {
+  padding: 15px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-top: 5px;
+}
+
+/* line 235, /Applications/XAMPP/xamppfiles/htdocs/frindse.com/assets/css/desktop/v1/sass/partials/PostStyle.scss */
+.comment:first-child {
+  border-top: 1px solid #eee;
+  padding: 15px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 10px;
+  padding-bottom: 0px;
+}
+
+/* line 244, /Applications/XAMPP/xamppfiles/htdocs/frindse.com/assets/css/desktop/v1/sass/partials/PostStyle.scss */
+.comment:last-child {
+  padding: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+}
+
+/* line 251, /Applications/XAMPP/xamppfiles/htdocs/frindse.com/assets/css/desktop/v1/sass/partials/PostStyle.scss */
+.comment > .profilePicLeft div {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+}
+
+/* line 257, /Applications/XAMPP/xamppfiles/htdocs/frindse.com/assets/css/desktop/v1/sass/partials/PostStyle.scss */
+.comment:first-child {
+  padding-bottom: 5px;
+}
+
+/* line 261, /Applications/XAMPP/xamppfiles/htdocs/frindse.com/assets/css/desktop/v1/sass/partials/PostStyle.scss */
+.comment > .rightPerson {
+  margin-left: 60px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* line 267, /Applications/XAMPP/xamppfiles/htdocs/frindse.com/assets/css/desktop/v1/sass/partials/PostStyle.scss */
+.comment > .rightPerson h3 {
+  font-weight: 400;
+}
+
+/* line 271, /Applications/XAMPP/xamppfiles/htdocs/frindse.com/assets/css/desktop/v1/sass/partials/PostStyle.scss */
+.comment > .rightPerson h3 a {
+  font-size: 16px;
+  font-weight: 500;
+  color: #52a6e6;
+}
+
+/* line 277, /Applications/XAMPP/xamppfiles/htdocs/frindse.com/assets/css/desktop/v1/sass/partials/PostStyle.scss */
+.comment > .rightPerson p {
+  font-weight: 400;
+  padding-left: 1px;
+  padding-top: 5px;
+}
+
+/* line 283, /Applications/XAMPP/xamppfiles/htdocs/frindse.com/assets/css/desktop/v1/sass/partials/PostStyle.scss */
+.comment > .rightPerson > .actions {
+  padding-top: 5px;
+}
+
+/* line 287, /Applications/XAMPP/xamppfiles/htdocs/frindse.com/assets/css/desktop/v1/sass/partials/PostStyle.scss */
+.comment > .rightPerson > .actions a {
+  color: #aaa;
+}
+
+/*# sourceMappingURL=../../partials/PostStyle.map */

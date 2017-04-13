@@ -10,7 +10,7 @@ $(function() {
             var email = $("#email");
             var password = $("#password");
 
-            if (email != "" && password != "") {
+            if (email.val() != "" && password.val() != "") {
                 $.post(folder + '/api/auth/login', {
                     email: email.val(),
                     password: password.val()
@@ -22,6 +22,8 @@ $(function() {
                         socket.send('{"type":"addNewlyLoggedUser", "sid":"'+obj.sid+'", "sid_s":"'+obj.sid_s+'"}');
                         
                         $(".responseHold").html("<div class='response success'>" + obj.status + "</div><br /><br />");
+                        
+                        window.location.assign(folder + "/timeline");
                         busy = false;
                     } else {
                         $(".responseHold").html("<div class='response error'>" + obj.status + "</div><br /><br />");

@@ -10,6 +10,11 @@ class Sessions
     {
         session_start();
     }
+    
+    static public function getSessionToken()
+    {
+        return session_id();
+    }
 
     static public function set($key, $value)
     {
@@ -18,7 +23,12 @@ class Sessions
 
     static public function get($key)
     {
-        return $_SESSION[$key];
+        if(isset($_SESSION[$key])) 
+        {
+            return $_SESSION[$key];
+        }else{
+            return false;
+        }
     }
 
     static public function unsetKey($key)

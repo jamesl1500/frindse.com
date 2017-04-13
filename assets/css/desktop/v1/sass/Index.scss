@@ -24,14 +24,14 @@
 
         h3{
           color: white;
-          font-weight: 200;
+          font-weight: 300;
           font-size: 3.4em;
         }
 
         h4{
           color: white;
 
-          font-weight: 100;
+          font-weight: 200;
           font-size: 2.0em;
 
           margin-top: 15px;
@@ -42,7 +42,7 @@
           margin-top: 10px;
 
           font-size: 1.3em;
-          font-weight: 200;
+          font-weight: 300;
           color: white;
 
           cursor: pointer;
@@ -71,6 +71,7 @@
               color: $secondaryText;
               font-size: 22px;
               text-align: center;
+              font-weight: 300;
             }
           }
 
@@ -111,7 +112,7 @@
       color: $primaryColor;
 
       font-size: 2.5em;
-      font-weight: 200;
+      font-weight: 300;
 
       margin-bottom: 5px;
     }
@@ -121,12 +122,13 @@
       color: $primaryColor;
 
       font-size: 3.8em;
-      font-weight: 200;
+      font-weight: 300;
     }
 
     p{
       margin-top: 15px;
       text-align: center;
+      font-weight: 300;
     }
   }
 }
@@ -168,6 +170,7 @@
 
       p{
         margin-top: 15px;
+        font-weight: 300;
         width: 60%;
 
         color: white;

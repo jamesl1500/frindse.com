@@ -3,6 +3,8 @@
 * ----
 * This will be the main file that will serve most of the initial files
 */
+@import "partials/Animate";
+
 @import "partials/Roboto";
 @import "partials/Fontawesome";
 
@@ -13,4 +15,7 @@
 
 @import "partials/Header";
 @import "partials/Sidebar";
+
+@import "partials/PostStyle";
+
 

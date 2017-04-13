@@ -58,6 +58,14 @@ body{
   display: none;
 }
 
+a{
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
 // Inputs
 input{
   outline: none !important;
@@ -152,13 +160,28 @@ input{
   margin-bottom: 0px;
 }
 
+.btn {
+  padding: 10px 16px;
+  font-size: 1.0rem;
+  letter-spacing: .007px;
+  font-weight: 500;
+  border: none;
+
+  border-radius: 2px;
+}
+
 .buttonLong{
   width: 100%;
 }
 
 .primaryBTN{
   background: $primaryColor;
-  color: white;
+  color: white !important;
+}
+
+.busyBTN{
+  background: $primarygrey !important;
+  color: #333 !important;
 }
 
 /**
@@ -180,7 +203,28 @@ input{
   border-bottom: 1px solid #F9F9F9;
 
   height: auto;
+}
 
+.card-material{
+  border-radius: 2px;
+
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  border-bottom: 1px solid #F9F9F9;
+
+  height: auto;
+}
+
+.cardHead{
+  padding: 15px;
+  padding-bottom: 0px;
+
+  h3{
+    color: #aaa;
+    font-weight: 500;
+  }
+}
+
+.card-padding{
   padding: 20px;
 }
 
@@ -210,4 +254,346 @@ input{
 
   background: $primarysuccess;
   color: white;
+}
+
+/*
+* User Mods
+*/
+
+.borderedMod{
+  border-bottom: 1px solid #eee;
+}
+
+.borderedMod:last-child{
+  border-bottom:  none;
+}
+
+.userMod{
+  background: white;
+  padding: 15px;
+
+  .modProfilePic{
+    float: left;
+
+    width: 40px;
+    height: 40px;
+
+    img{
+      width: 40px;
+      height: 40px;
+
+      border-radius: 50%;
+    }
+  }
+
+  .modInfo{
+    margin-left: 50px;
+    padding-top: 2px;
+
+    h3{
+      color: $primaryColor;
+
+      font-size: 1.0em;
+      font-weight: 500;
+
+      padding-bottom: 2px;
+    }
+
+    h4{
+      color: #aaa;
+      font-weight: 400;
+      font-size: .9em;
+    }
+  }
+}
+
+.activityTimelinePost {
+  width: 100%;
+  margin: 0% auto;
+  min-height: 50px;
+  background-color: #fff;
+  padding: 10px;
+  /* display: inline-block; */
+  margin-bottom: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  border-radius: 2px;
+}
+
+.activityTimelinePost img {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  float: left;
+}
+
+.activityTimelinePost > .rightActivity {
+  float: right;
+  width: 92%;
+  padding-top: 0
+}
+
+.activityTimelinePost > .rightActivity h5 {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.c {
+  color: #000;
+  border-radius: 25px;
+  font-size: 14px;
+  padding: 8px;
+  float: right;
+  background: #ecf0f1
+}
+
+.searchUserObject {
+  margin: 10px;
+  height: auto;
+  text-align: initial;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+}
+
+.searchUserObject > .inner_search_object > .profilePictureSearch {
+  float: left;
+}
+
+.searchUserObject > .inner_search_object > .profilePictureSearch img {
+  height: 45px;
+  width: 45px;
+
+  border-radius: 50%;
+}
+
+.searchUserObject > .inner_search_object > .rightInformation {
+  margin-left: 60px;
+  padding-top: 5px;
+}
+
+.searchUserObject > .inner_search_object > .rightInformation h3 {
+  font-size: 1.1em;
+}
+
+.searchUserObject > .inner_search_object > .rightInformation h4 {
+  font-weight: 400;
+}
+
+.searchBackground {
+  background: rgba(0, 0, 0, .3);
+}
+
+.count {
+  /* transition-delay: 0s; */
+  text-decoration: none;
+  position: relative;
+  top: -40px;
+  left: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  color: #fff;
+  background: #e74c3c;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  font-size: 12px;
+  font-weight: 600;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.n_mod {
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+  height: 75px;
+  border-radius: 2px;
+
+  width: 320px;
+}
+
+.n_mod > .rightParts {
+  width: 76%;
+  float: right;
+  padding: 10px;
+}
+
+.n_mod > .rightParts h2 {
+  font-size: 14px;
+  color: #52a6e6;
+}
+
+.n_mod > .rightParts p {
+  font-size: 14px;
+  color: #333;
+  padding-top: 5px;
+}
+
+.n_mod > .rightParts ul {
+  margin: 0;
+  padding: 5px;
+  border-top: 1px solid rgba(0, 0, 0, .1)
+}
+
+.n_mod > .rightParts ul li {
+  display: inline;
+  text-align: center;
+  color: #fff;
+  width: 50%
+}
+
+.n_mod > .leftParts {
+  background-size: cover;
+  float: left;
+  height: 75px;
+}
+
+.n_mod > .leftParts h2 {
+  font-size: 30px;
+  color: #fff;
+  padding-top: 30px;
+  margin: 0;
+  padding-left: 15px
+}
+
+.ach_mod {
+  background: #3498db;
+  height: 100px
+}
+
+.ach_mod > .rightParts {
+  width: 78%;
+  float: right
+}
+
+.ach_mod > .rightParts h2 {
+  font-size: 24px;
+  color: #fff
+}
+
+.ach_mod > .rightParts p {
+  font-size: 18px;
+  color: #fff
+}
+
+.ach_mod > .rightParts ul {
+  margin: 0;
+  padding: 5px;
+  border-top: 1px solid rgba(0, 0, 0, .1)
+}
+
+.ach_mod > .rightParts ul li {
+  display: inline;
+  text-align: center;
+  color: #fff;
+  width: 50%
+}
+
+.ach_mod > .leftParts {
+  background: rgba(0, 0, 0, .2);
+  float: left;
+  width: 20%;
+  height: 100px
+}
+
+.ach_mod > .leftParts h2 {
+  font-size: 30px;
+  color: #fff;
+  padding-top: 30px;
+  margin: 0;
+  padding-left: 15px
+}
+
+.global_response_holder {
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  right: 0px;
+  top: 0;
+  z-index: 2000;
+  text-align: center;
+}
+
+.global_response_holder center p {
+  padding: 0px;
+  color: #fff;
+  font-size: 1.5em;
+  padding-top: 20px;
+}
+
+.global_error {
+  background: #e74c3c
+}
+
+.global_success {
+  background: #1abc9c
+}
+
+.global_warning {
+  background: #f39c12
+}
+
+.closeAchNode {
+  position: relative;
+  top: -100px;
+  right: 0;
+  float: right;
+  color: #fff;
+  padding-right: 10px;
+  cursor: pointer
+}
+
+.c {
+  color: #000;
+  border-radius: 25px;
+  font-size: 14px;
+  padding: 8px;
+  float: right;
+  background: #ecf0f1
+}
+
+// Post buttons
+.repostMaker{
+  color: #999 !important;
+  text-decoration: none;
+}
+
+.commentMaker{
+  color: #999 !important;
+  text-decoration: none;
+}
+
+.postLikeListener{
+  text-decoration: none;
+}
+
+.repostMaker{
+  color: #999 !important;
+  text-decoration: none !important;
+}
+
+.commentMaker{
+  color: #999 !important;
+  text-decoration: none !important;
+}
+
+.postLikeListener{
+  text-decoration: none;
 }

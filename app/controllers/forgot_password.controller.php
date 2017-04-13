@@ -36,29 +36,29 @@ class Forgot_passwordController extends Controller
         $this->view->render('forgot_password', 'index', SITE_TEMPLATES_VER);
     }
 
-    public function activate($data)
+    public function reset($data)
     {
         // Initiate view vars for this page
-        $this->view->title = "Activate | Frindse";
+        $this->view->title = "Change Password | Frindse";
         $this->view->version = SITE_TEMPLATES_VER;
-        $this->view->stylesheet = "signup";
-        $this->view->javascript = "Signup";
+        $this->view->stylesheet = "forgot_password";
+        $this->view->javascript = "forgot_password";
         $this->view->header = "header-logged-out";
 
-        // Now create the view
-        $check = $this->db->prepare("SELECT * FROM users WHERE email=:email AND user_salt=:code AND activated='0'");
-        $check->execute(array(':email'=>$data['email'], ':code'=>$data['code']));
+        // Now create the view but make sure this is a valid request
+        $check = $this->db->prepare("SELECT * FROM forgot_password WHERE code=:code AND email=:email");
+        $check->execute(array(':code'=>$data['code'], ':email'=>$data['email']));
 
         if($check->rowCount() == 1)
         {
             $fetch = $check->fetch(PDO::FETCH_ASSOC);
 
-            // Plus vars
-            $this->view->firstname = $fetch['firstname'];
+            // Plug vars
+            $this->view->code = $fetch['code'];
+            $this->view->user_id = $fetch['user_id'];
             $this->view->email = $fetch['email'];
-            $this->view->code = $fetch['user_salt'];
 
-            $this->view->render('signup', 'activate', SITE_TEMPLATES_VER);
+            $this->view->render('forgot_password', 'change_password', SITE_TEMPLATES_VER);
         }else{
             Redirect::to('errors', '404');
         }

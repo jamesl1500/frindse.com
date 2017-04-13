@@ -36,6 +36,7 @@ defined('SITE_TAG') or define('SITE_TAGS','');
 defined('SITE_VER') or define('SITE_VER','0.0.1');
 defined('SITE_TEMPLATES_VER') or define('SITE_TEMPLATES_VER','1');
 defined('SITE_LOGO') or define('SITE_LOGO','frindse-circle-logo.jpg');
+define('DS', DIRECTORY_SEPARATOR);
 
 defined('PASSWORD_HASH_METHOD') or define('PASSWORD_HASH_METHOD', PASSWORD_BCRYPT);
 
@@ -127,3 +128,55 @@ define('COOKIE_NAME', 'remember_cache');
 defined('CSRF_TOKEN_NAME') or define('CSRF_TOKEN_NAME', 'FRINDSE_TOKEN_CSRF');
 defined('CSRF_COOKIE_NAME') or define('CSRF_COOKIE_NAME', 'FRINDSE_COOKIE_CSRF');
 defined('CSRF_EXPIRE') or define('CSRF_EXPIRE', 7200);
+
+//-- 9. Database Names
+defined('USERS') or define('USERS', 'users');
+defined('RELATIONSHIPS') or define('RELATIONSHIPS', 'relationships');
+defined('LOGIN_TOKENS') or define('LOGIN_TOKENS', 'login_tokens');
+defined('FORGOT_PASSWORD') or define('FORGOT_PASSWORD', 'forgot_password');
+defined('HASHTAGS') or define('HASHTAGS', 'hashtags');
+defined('NOTES') or define('NOTES', 'notes');
+define('BLOCKS','blocks');
+define('MESSAGES','mesages');
+define('EMAIL_NOTIFICATIONS','email_notifications');
+define('ACHIEVEMENTS_TYPES','achievement_types');
+define('RANK_TYPES','rank_types');
+define('POST_REPORTS','post_reports');
+define('PERSON_RATES','person_rates');
+define('OPEN_TIMELINE_CHATS','open_timeline_chats');
+define("PROFILE_VIEWERS","profile_viewers");
+define('FRIEND_REQUESTS','friend_requests');
+
+// Timeline Tables
+define("TIMELINE_ITEM", "timeline_item");
+define("TIMELINE_POST_COMMENTS","timeline_post_comments");
+define("TIMELINE_ITEM_TEXT", "timeline_item_text");
+define("TIMELINE_ITEM_PERSONLIKE","	timeline_item_personlike");
+define("TIMELINE_ITEM_VIDEO","timeline_item_videos");
+define("TIMELINE_ITEM_PHOTO","timeline_item_photo");
+define("TIMELINE_ITEM_FRIENDS","timeline_item_friends");
+define("TIMELINE_POST_COMMENTS_LIKES","timeline_post_comments_likes");
+define("TIMELINE_ITEM_MUSIC","timeline_item_music");
+define("TIMELINE_POST_LIKES","timeline_post_likes");
+define("TIMELINE_ITEM_ACTIVITY","timeline_item_activity");
+define("TIMELINE_ITEM_CLIQUE_SHARE","timeline_item_clique_share");
+define("TIMELINE_ITEM_SHARE","timeline_item_share");
+define("TIMELINE_ITEM_ORIGINAL_VIDEOS","timeline_item_original_videos");
+define("TIMELINE_ITEM_CHAT_INVITE","timeline_item_chat_invite");
+
+// Chats Tables
+define('CHATS', 'chats');
+define('CHAT_MEMBERS','chat_members');
+define('CHAT_MESSAGES_ITEM','chat_messages_item');
+define('CHAT_MESSAGE_ITEM_NOTE','chat_message_item_note');
+define('CHAT_MESSAGE_ITEM_TEXT','chat_message_item_text');
+define('CHAT_MESSAGE_ITEM_VIDEO','chat_message_item_video');
+define('CHAT_MESSAGE_ITEM_PICTURE','chat_message_item_picture');
+define('CHAT_MESSAGES_ITEM_USERJOINED','chat_message_item_userJoined');
+define('CHAT_MESSAGE_ITEM_USERLEFT','chat_message_item_userLeft');
+
+// Cliques
+define('CLIQUES','cliques');
+define('CLIQUE_MEMBERS','clique_members');
+define('CLIQUE_REQUESTS','clique_requests');
+define('CLIQUE_INVITES','clique_invites');

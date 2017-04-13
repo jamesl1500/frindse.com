@@ -20,6 +20,61 @@ class ForgotPasswordSystem extends Database
         $this->db = new Database();
     }
 
+    public function recoverPassword($data)
+    {
+        if(!empty($data))
+        {
+            // Lets make sure this request is valid, first lets make sure the user exist
+            $check1 = $this->db->prepare("SELECT * FROM ". USERS ." WHERE email=:email");
+            $check1->execute(array(':email'=>$data['email']));
+
+            if($check1->rowCount() == 1)
+            {
+                // Were good then so check the request and make sure its valid
+                $check2 = $this->db->prepare("SELECT * FROM ". FORGOT_PASSWORD ." WHERE email=:email AND code=:code");
+                $check2->execute(array(':email'=>$data['email'], ':code'=>$data['code']));
+
+                if($check2->rowCount() == 1) {
+                    // Check to make sure the two passwords match
+                    if ($data['password1'] == $data['password2'])
+                    {
+                        // So now update the user and delete the request
+                        $delete = $this->db->prepare("DELETE FROM ". FORGOT_PASSWORD ." WHERE code=:code AND email=:email");
+                        if ($delete->execute(array(':email' => $data['email'], ':code' => $data['code'])))
+                        {
+                            // Now update everything
+                            $update = $this->db->prepare("UPDATE ". USERS ." SET password=:password WHERE email=:email");
+                            if($update->execute(array(':email'=>$data['email'],':password'=>Validation::passwordEncrypt($data['password1']))))
+                            {
+                                // All done!
+                                echo json_encode(array('status' => 'Your password has been changed! Please login now.', 'code' => 1));
+                                http_response_code(200);
+                            }else{
+                                echo json_encode(array('status' => MESSAGE_SQL_ERROR, 'code' => 0));
+                                http_response_code(200);
+                            }
+                        } else {
+                            echo json_encode(array('status' => MESSAGE_SQL_ERROR, 'code' => 0));
+                            http_response_code(200);
+                        }
+                    }else{
+                        echo json_encode(array('status' => MESSAGE_PASSWORDS_DONT_MATCH, 'code' => 0));
+                        http_response_code(200);
+                    }
+                }else{
+                    echo json_encode(array('status' => 'Invalid Request', 'code' => 0));
+                    http_response_code(200);
+                }
+            }else{
+                echo json_encode(array('status' => MESSAGE_USER_NO_EXIST, 'code' => 0));
+                http_response_code(200);
+            }
+        }else{
+            echo json_encode(array('status' => 'Invalid Request', 'code' => 0));
+            http_response_code(200);
+        }
+    }
+
     public function initiatePasswordRecovery($data)
     {
         if(!empty($data))
@@ -27,7 +82,7 @@ class ForgotPasswordSystem extends Database
            $this->email = Validation::encrypt($data['email']);
 
             // Check to see if the user exists
-            $check = $this->db->prepare("SELECT * FROM users WHERE email=:email");
+            $check = $this->db->prepare("SELECT * FROM ". USERS ." WHERE email=:email");
             if($check->execute(array(':email'=>$this->email)))
             {
                 if($check->rowCount() == 1)
@@ -35,16 +90,16 @@ class ForgotPasswordSystem extends Database
                     $fetch = $check->fetch(PDO::FETCH_ASSOC);
 
                     // Means we got a hit, now make sure they havent asked for a new password recently
-                    $check2 = $this->db->prepare("SELECT * FROM forgot_password WHERE user_id=:user_id");
+                    $check2 = $this->db->prepare("SELECT * FROM ". FORGOT_PASSWORD ." WHERE user_id=:user_id");
                     $check2->execute(array(':user_id'=>$fetch['user_id']));
 
                     if($check2->rowCount() == 0)
                     {
                         @$code = bin2hex(openssl_random_pseudo_bytes(64, $cstrong = true));
-                        
+
                         // Now insert stuff and send email
-                        $insert = $this->db->prepare("INSERT INTO forgot_password VALUES('', :user_id, :code, now())");
-                        if($insert->execute(array(':user_id'=>$fetch['user_id'], ':code'=>$code)))
+                        $insert = $this->db->prepare("INSERT INTO ". FORGOT_PASSWORD ." VALUES('', :user_id, :email, :code, now())");
+                        if($insert->execute(array(':user_id'=>$fetch['user_id'], ':code'=>$code, ':email'=>$this->email)))
                         {
                             // Send the email
                             // Now send the email

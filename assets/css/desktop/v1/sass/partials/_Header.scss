@@ -1,13 +1,49 @@
 .header{
   width: 100%;
-  height: 70px;
+  height: 65px;
   z-index: 10002;
+
+  .navBoxes{
+    float: right;
+    margin-right: 10px;
+
+    padding-right: 0px;
+    position: fixed;
+
+    right: 0px;
+    top: 70px;
+
+    .navBox{
+      height: 250px;
+      margin-top: 10px;
+
+      padding: 20px;
+
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      background: white;
+
+      .topHead{
+        border-bottom: 1px solid #eee;
+
+        padding-bottom: 15px;
+
+        h3 {
+          color: #aaa;
+          font-size: 1.2em;
+        }
+      }
+    }
+
+    .innerHold{
+      padding-top: 10px;
+    }
+  }
 
   .header-container{
     padding: 0px !important;
 
     .leftNavArea{
-      height: 70px;
+      height:65px;
       background: white;
 
       .leftIconHold{
@@ -49,9 +85,11 @@
           margin-left: 50px;
           padding-top: 10px;
 
+
           a {
             color: $primaryText;
             font-size: 1.1em;
+            font-weight: 400;
           }
         }
       }
@@ -60,7 +98,46 @@
     .middleNav{
 
       .searchBarHold{
+        margin: 0% auto;
         margin-top: 12px;
+        float: none;
+
+        .search_results {
+          width: 100%;
+          max-height: 400px;
+          position: absolute;
+          margin: 0% auto;
+          top: 55px;
+          display: none;
+          right: 2px;
+          z-index:10002;
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
+          .filterResultsNav {
+            background: white;
+            border-top: 1px solid #eee;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+
+            display: flex;
+            justify-content: center;
+
+            ul {
+              .filterResultsNavActive {
+                border-bottom: 2px solid $primaryColor;
+              }
+
+              li {
+                padding: 10px;
+                display: inline-block;
+
+                a {
+                  padding: 10px;
+                }
+              }
+            }
+          }
+        }
 
         form {
 
@@ -68,7 +145,7 @@
             border: 1px solid #eee;
             border-radius: 2px;
 
-            font-weight: 500;
+            font-weight: 400;
             color: $primaryText;
 
             width: 100%;
@@ -78,6 +155,7 @@
           }
 
           input[type='search']:focus {
+            border: none;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
           }
         }
@@ -100,7 +178,46 @@
 
           a{
             color: $secondaryText;
+            font-weight: 300;
             text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.logged{
+
+  .rightProfileIcon{
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    float: right;
+    margin-right: 10px;
+    margin-top: 14px;
+
+    img{
+      width: 100%;
+      height: 100%;
+
+      border-radius: 50%;
+    }
+  }
+
+  .leftIcons{
+    float: right;
+
+    .innerLeftIcons{
+      padding-right: 5px;
+      ul{
+        li{
+          span{
+            color: #aaa;
+            cursor: pointer;
+            font-size: 1.1em;
           }
         }
       }
@@ -144,3 +261,5 @@
 .header-logged-out{
   background: white;
 }
+
+/* Sidebar */

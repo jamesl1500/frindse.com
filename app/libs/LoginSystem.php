@@ -32,7 +32,7 @@ class LoginSystem extends Database
 			if(Validation::isEmail(Validation::decrypt(self::$email)))
 			{
 				// Now see if the person with this email exist
-				$check = $this->db->prepare("SELECT * FROM users WHERE email='".self::$email."'");
+				$check = $this->db->prepare("SELECT * FROM ". USERS ." WHERE email='".self::$email."'");
 				$check->execute();
 				
 				if($check->rowCount() == 1)
@@ -51,13 +51,14 @@ class LoginSystem extends Database
 							// Means they're activated so log them in!
 							switch ($fetch['status']) {
 								case 'unlocked':
-									// Means to go ahead and log the person in
-									$insert = $this->db->prepare("UPDATE users SET last_login=now() WHERE user_id='" . $user_id . "'");
-									$insert->execute();
-
 									// Start session
 									$_SESSION['uid'] = $user_id;
 									$_SESSION['salt'] = $fetch['user_salt'];
+									$_SESSION['session_id'] = Sessions::getSessionToken();
+
+									// Means to go ahead and log the person in
+									$insert = $this->db->prepare("UPDATE ". USERS ." SET last_login=now(), sess_token='".Sessions::getSessionToken()."' WHERE user_id='" . $user_id . "'");
+									$insert->execute();
 
 									// Make a new token
 									@$this->createLoginToken($fetch['user_salt'], bin2hex(openssl_random_pseudo_bytes(64, $cstrong = true)));
@@ -109,10 +110,10 @@ class LoginSystem extends Database
 		if(!empty($salt) && !empty($token))
 		{
 			// Delete any tokens by the user
-			$delete = $this->db->prepare("DELETE FROM login_tokens WHERE user_salt=:salt");
+			$delete = $this->db->prepare("DELETE FROM ". LOGIN_TOKENS ." WHERE user_salt=:salt");
 			if($delete->execute(array(':salt'=>$salt)))
 			{
-				$insert = $this->db->prepare("INSERT INTO login_tokens VALUES('', :token, :salt)");
+				$insert = $this->db->prepare("INSERT INTO ". LOGIN_TOKENS ." VALUES('', :token, :salt)");
 				if($insert->execute(array(':token' => sha1($token), ':salt' => $salt)))
 				{
 					// Create cokies
@@ -131,7 +132,7 @@ class LoginSystem extends Database
 			if(isset($_COOKIE['FUID']))
 			{
 				// Means we have a good cookie but lets make sure it exists
-				$check = $this->db->prepare("SELECT * FROM login_tokens WHERE token=:token");
+				$check = $this->db->prepare("SELECT * FROM ". LOGIN_TOKENS ." WHERE token=:token");
 				if($check->execute(array(':token'=>sha1($_COOKIE['FUID']))))
 				{
 					$fetch = $check->fetch(PDO::FETCH_ASSOC);
